@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My LMS Profile</title>
+    <title>Learning Management System - Rankings</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-image: url(assets/pl.jpg);
         }
 
         header {
@@ -42,137 +42,59 @@
             margin: 20px;
         }
 
-        .profile-container {
+        .ranking-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .ranking-card {
             background-color: #fff;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .profile-picture {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            margin: 15px;
             overflow: hidden;
-            margin: 0 auto 20px;
+            position: relative;
+            width: 200px;
             transition: transform 0.3s ease-in-out;
         }
-        .profile-picture:hover{
+
+        .ranking-card:hover {
             transform: scale(1.05);
         }
 
-        .profile-picture img {
+        .ranking-card img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: auto;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
         }
 
-        .user-details {
+        .ranking-details {
+            padding: 15px;
             text-align: center;
-            margin-bottom: 20px;
         }
 
-        .user-details h2 {
-            margin: 0;
+        .ranking-details h3 {
+            margin: 10px 0 5px;
+            color: #333;
         }
 
-        .user-details p {
-            color: #666;
-        }
-
-        .courses {
-            margin-top: 20px;
-        }
-
-        .course {
-            background-color: #eee;
-            padding: 10px;
-            margin-bottom: 10px;
-            border-radius: 5px;
-            transition: transform 0.3s ease-in-out;
-        }
-        .course:hover{
-            transform: scale(1.05);
-        }
-
-        .course h3 {
+        .ranking-details p {
             margin: 5px 0;
-        }
-
-        .course p {
-            margin: 0;
             color: #888;
         }
 
-        .progress-bar {
-            background-color: #ddd;
-            height: 20px;
-            border-radius: 5px;
-            margin-bottom: 10px;
-            overflow: hidden;
-        }
-
-        .progress {
-            height: 100%;
-            background-color: #4caf50;
-        }
-        
-
-        .grades-container {
-            margin-top: 20px;
-            
-        }
-        
-
-        .bar-graph {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-        }
-
-        .bar {
-            flex: 1;
+        .ranking-number {
+            position: absolute;
+            top: 10px;
+            left: 10px;
             background-color: #3498db;
-            margin: 0 5px;
-            text-align: center;
-            padding: 80px 0;
-            border-radius: 5px;
             color: #fff;
-            font-weight: bold;
-            transition: transform 0.3s ease-in-out;
-        }
-        .bar:hover{
-            transform: scale(1.05);
-        }
-        .bar1 {
-            flex: 1;
-            background-color: #3498db;
-            margin: 0 5px;
-            text-align: center;
-            padding: 60px 0;
+            padding: 5px 10px;
             border-radius: 5px;
-            color: #fff;
             font-weight: bold;
-            transition: transform 0.3s ease-in-out;
-        }
-        .bar1:hover{
-            transform: scale(1.05);
-        }
-        .bar2 {
-            flex: 1;
-            background-color: #3498db;
-            margin: 0 5px;
-            text-align: center;
-            padding: 75px 0;
-            border-radius: 5px;
-            color: #fff;
-            font-weight: bold;
-            transition: transform 0.3s ease-in-out;
-        }
-        .bar2:hover{
-            transform: scale(1.05);
+            z-index: 1;
         }
         nav {
             background-color: #333;
@@ -199,65 +121,51 @@
     <header>
         <h1>Learniverse</h1>
         <nav>
-        <a href="home page.html">Home</a>
-        <a href="3.html">Profile</a>
-        <a href="rank.html">Community</a>
-        <a href="badges.html">Rewards</a>
-        <a href="#">Study Group</a>
-    </nav>
+            <a href="home page.html">Home</a>
+            <a href="3.html">Profile</a>
+            <a href="rank.html">Community</a>
+            <a href="badges.html">Rewards</a>
+            <a href="#">Study Group</a>
+        </nav>
     </header>
 
     
 
-    <section class="profile-container">
-        <div class="profile-picture">
-            <img src="assets/profile-picture.jpg" alt="Profile Picture">
-        </div>
-        <div class="user-details">
-            <h2>AYUSHMAN</h2>
-            <p>Email: ayushman@gmail.com</p>
-            <p>Role: Student</p>
-        </div>
-        <div class="courses">
-            <div class="course">
-                <h3>Course 1: Introduction to Programming</h3>
-                <p>Instructor: Jane Smith</p>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 75%;"></div>
-                </div>
+    
+
+    <section class="ranking-container">
+        <div class="ranking-card">
+            <div class="ranking-number">1</div>
+            <img src="assets/badge1.jpg" alt="Student 1">
+            <div class="ranking-details">
+                <h3>Master Scholar</h3>
+                <p>Course: Introduction to Programming</p>
+                <p>Score: 95%</p>
             </div>
-            <div class="course">
-                <h3>Course 2: Web Development Basics</h3>
-                <p>Instructor: Bob Johnson</p>
-                <div class="progress-bar">
-                    <div class="progress" style="width: 90%;"></div>
-                </div>
-            </div>
-            
         </div>
 
-        <div class="grades-container">
-            <h2>Grades</h2>
-            <div class="bar-graph">
-                <h3></h3>
-
-                <div class="bar" style="height: 80%;">80%<br>Python</div>
-                <div class="bar1" style="height: 60%;">60%<br>Java</div>
-                <div class="bar2" style="height: 75%;">75%<br>C and C++</div>
-                
+        <div class="ranking-card">
+            <div class="ranking-number">2</div>
+            <img src="assets/badge2.jpg" alt="Student 2">
+            <div class="ranking-details">
+                <h3>Quiz Whiz</h3>
+                <p>Course: Web Development Basics</p>
+                <p>Score: 90%</p>
             </div>
         </div>
+
+        <div class="ranking-card">
+            <div class="ranking-number">3</div>
+            <img src="assets/badge3.jpg" alt="Student 2">
+            <div class="ranking-details">
+                <h3>Diligent Reader</h3>
+                <p>Course: Web Development Basics</p>
+                <p>Score: 90%</p>
+            </div>
+        </div>
+    
     </section>
 
 </body>
 
 </html>
-
-        
-          
-        
-           
-           
-           
-   
-        
