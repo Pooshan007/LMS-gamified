@@ -5,59 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learniverse</title>
     <style>
+       
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-image: url(assets/pl.jpg);
+            background-size: cover;
+            
         }
 
         header {
-            background-color: #333;
+            background-color: transparent;
             color: #fff;
             padding: 10px;
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            margin: 0;
         }
 
         nav {
-            background-color: #4CAF50;
-            overflow: hidden;
-            text-align: center;
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
         }
 
         nav a {
-            float: left;
-            display: block;
             color: #fff;
-            text-align: center;
-            padding: 14px 16px;
             text-decoration: none;
+            padding: 10px;
         }
-
-        nav a:hover {
+        nav a:hover{
             background-color: #ddd;
             color: #333;
+
+
         }
 
         .course {
-            padding: 20px;
-            margin: 20px;
-            background-color: #fff;
+            padding: 30px;
+            width: 50%;
+            margin: 30px;
+            background-color: transparent;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-             transition: transform 0.3s ease-in-out;
+            transition: transform 0.3s ease-in-out;
+            display: flexbox;
+            border-style: solid;
+            border-color: #fff;
+
 
         }
+       
         .course:hover{
             transform: scale(1.05);
         }
 
         .course h2 {
-            color: #333;
+            color: #fff;
         }
 
         .course p {
-            color: #555;
+            color: #ddd;
         }
         
     </style>
@@ -65,15 +78,16 @@
 <body>
     <header>
         <h1>Learniverse</h1>
-    </header>
-
-    <nav>
+        <nav>
         <a href="#">Home</a>
         <a href="3.html">Profile</a>
         <a href="rank.html">Community</a>
         <a href="badges.html">Rewards</a>
         <a href="#">Study Group</a>
     </nav>
+    </header>
+
+    
 
     <div class="course">
         <h2>Continue where you left:Applied Physics</h2>
