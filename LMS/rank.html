@@ -11,21 +11,44 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            background-image: url(assets/pl.jpg);
         }
 
         header {
-            background-color: #333;
+            background-color: transparent;
             color: #fff;
             padding: 10px;
-            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+        }
+
 
         section {
             margin: 20px;
         }
+        h2{
+            text-align: centre;
+        }
 
         .ranking-container {
-            background-color: #fff;
+            background-color:aliceblue;
             padding: 20px;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -76,7 +99,7 @@
             color: #888;
         }
         nav {
-            background-color: #4CAF50;
+            background-color: transparent;
             overflow: hidden;
             text-align: center;
         }
@@ -94,24 +117,36 @@
             background-color: #ddd;
             color: #333;
         }
+        h2{
+            text-align: center;
+        }
+        .main-container{
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(20px);
+            max-width: 800px;
+            margin: 0 auto;
+        }
     </style>
 </head>
 
 <body>
     <header>
         <h1>Learniverse</h1>
+        <nav>
+            <a href="home page.html">Home</a>
+            <a href="3.html">Profile</a>
+            <a href="rank.html">Community</a>
+            <a href="badges.html">Rewards</a>
+            <a href="#">Study Group</a>
+        </nav>
     </header>
-
-    <nav>
-        <a href="home page.html">Home</a>
-        <a href="3.html">Profile</a>
-        <a href="rank.html">Community</a>
-        <a href="badges.html">Rewards</a>
-        <a href="#">Study Group</a>
-    </nav>
-
+ <div class="main-container">
 
     
+
+    <h2>Individual Leader Board</h2>
 
     <section class="ranking-container">
         <table class="ranking-table">
@@ -145,10 +180,48 @@
                     </td>
                     <td>90%</td>
                 </tr>
-                <!-- Add more entries as needed -->
+                
             </tbody>
         </table>
     </section>
+    <h2>Clan Leader Board</h2>
+    <section class="ranking-container">
+        <table class="ranking-table">
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Student</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td class="ranking-entry">
+                        <img src="assets/codeoholics.jpg" alt="Student 1">
+                        <div class="details">
+                            <h3>clan of codes</h3>
+                            <p>Course: Introduction to Programming</p>
+                        </div>
+                    </td>
+                    <td>945pts</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td class="ranking-entry">
+                        <img src="assets/cmrcet.jpg" alt="Student 2">
+                        <div class="details">
+                            <h3>code ninja</h3>
+                            <p>Course: Web Development Basics</p>
+                        </div>
+                    </td>
+                    <td>906 pts</td>
+                </tr>
+                
+            </tbody>
+        </table>
+    </section>
+</div>
 
 </body>
 
